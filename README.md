@@ -1,10 +1,9 @@
 # SoccerNetCore:
 This is a CRUD basic of Soccer. With two table (Pplayer and Team).
+__________________________________________________________________
 
 It is necessary to run the scripts -> database_script.sql
 The connectionString is changed in appsettings.json (to associate the database)
-
-===============================================================================
 
 ## Run the service:
 ###*To run the local service:
