@@ -6,7 +6,7 @@ It is necessary to run the scripts -> database_script.sql
 The connectionString is changed in appsettings.json (to associate the database)
 
 ## Run the service:
-###*To run the local service:
+*To run the local service:
 
 ```
 dotnet run
@@ -14,7 +14,7 @@ dotnet run
 https://localhost:5001/api/players
 http://localhost:5000/api/players
 
-###*To run the service with docker:
+*To run the service with docker:
 
 ```
 docker build -t soccer-net-core .
