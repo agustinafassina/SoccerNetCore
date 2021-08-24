@@ -1,5 +1,5 @@
 # SoccerNetCore:
-This is a CRUD basic of Soccer. With two table (Pplayer and Team).
+This is a CRUD basic of Soccer. With two table (Player and Team).
 __________________________________________________________________
 
 It is necessary to run the scripts -> database_script.sql
