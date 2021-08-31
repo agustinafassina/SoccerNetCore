@@ -42,6 +42,9 @@ namespace SoccerNetCore.Repository
             players.Name = player.Name;
             players.Country = player.Country;
             player.TeamId = player.TeamId;
+            player.Email = player.Email;
+            player.StartDate = player.StartDate;
+            player.EndDate = player.EndDate;
 
             _dbContext.SaveChanges();
         }
