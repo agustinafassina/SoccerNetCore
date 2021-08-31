@@ -11,5 +11,6 @@ namespace SoccerNetCore.Services
         void Post(Player request, Stream file);
         void Delete(int playerId);
         void Update(int playerId, Player body);
+        void GetSendEmail(int id);
     }
 }

@@ -9,9 +9,13 @@ namespace SoccerNetCore.Services
     public class PlayerService : IPlayerService
     {
         private readonly IPlayerRepository _playerRepository;
-        public PlayerService(IPlayerRepository playerRepository)
+        private readonly ISendEmailService _sendEmailService;
+        private readonly ITeamRepository _teamRepository;
+        public PlayerService(IPlayerRepository playerRepository, ISendEmailService sendEmailService, ITeamRepository teamRepository)
         {
             _playerRepository = playerRepository;
+            _teamRepository = teamRepository;
+            _sendEmailService = sendEmailService;
         }
 
         public List<Player> GetList()
@@ -62,6 +66,13 @@ namespace SoccerNetCore.Services
             {
                 _playerRepository.Update(body, playerId);
             }
+        }
+
+        public void GetSendEmail(int PlayerId)
+        {
+            var player = _playerRepository.GetById(PlayerId);
+            var team = _teamRepository.GetById(player.TeamId);
+            _sendEmailService.SendEmail(player, team.Name);
         }
     }
 }

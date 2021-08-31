@@ -76,5 +76,12 @@ namespace SoccerNetCore.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet("sendemail/{id}")]
+        public ActionResult<Player> GetSendEmail(int id)
+        {
+            _playerService.GetSendEmail(id);
+            return Ok();
+        }
     }
 }

@@ -20,6 +20,7 @@ namespace SoccerNetCore.Controllers
             _mapper = mapper;
         }
 
+        //Decorator for Odata - For example: teams?$filter=contains(name, 'Barcelona')
         [EnableQuery]
         [HttpGet]
         public ActionResult<IEnumerable<Team>> Get()

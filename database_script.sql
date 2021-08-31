@@ -102,3 +102,10 @@ VALUES(20, 'Kylian', 'Mbappé ', 'Francia', '450_1000.jpg', '450_1000-1629405246
 INSERT INTO soccernetcore.Player
 (Id, Name, LastName, Country, Logo, LogoNameUniq, TeamId)
 VALUES(21, 'Carlos', 'Tevez', 'Argentina', '450_1000.jpg', '450_1000-1629405294.jpg', 2);
+
+ALTER TABLE soccernetcore.Player ADD Birthday DATETIME NULL;
+ALTER TABLE soccernetcore.Player ADD Email varchar(100) NULL;
+ALTER TABLE soccernetcore.Player ADD StartDate DATETIME NULL;
+ALTER TABLE soccernetcore.Player ADD EndDate DATETIME NOT NULL;
+
+ALTER TABLE soccernetcore.Team ADD Email varchar(100) NULL;

@@ -8,6 +8,7 @@ namespace SoccerNetCore.Services
         {
             services.AddTransient<IPlayerService, PlayerService>();
             services.AddTransient<ITeamService, TeamService>();
+            services.AddTransient<ISendEmailService, SendEmailService>();
             return services;
         }
     }
