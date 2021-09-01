@@ -72,7 +72,8 @@ namespace SoccerNetCore.Services
         {
             var player = _playerRepository.GetById(PlayerId);
             var team = _teamRepository.GetById(player.TeamId);
-            _sendEmailService.SendEmail(player, team.Name);
+            //_sendEmailService.SendEmail(player, team.Name);
+            _sendEmailService.SendEmailForMailkit(player, team.Name);
         }
     }
 }
