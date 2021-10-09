@@ -21,3 +21,8 @@ docker build -t soccer-net-core .
 docker run -p 7001:80 --name soccer-net-core soccer-net-core
 ```
 http://localhost:7001/api/players
+
+
+Articles about the repository:
+https://medium.com/@agustinafassina_92108/implement-an-send-emails-service-with-mailkit-and-smtpclient-23327ebc9294
+https://medium.com/@agustinafassina_92108/soccer-microservice-on-asp-net-entity-framework-mysql-and-insomnia-11953ccabd8e
