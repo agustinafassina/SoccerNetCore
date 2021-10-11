@@ -37,11 +37,12 @@ namespace SoccerNetCore.Services
         private string SaveLogo(Stream fileLogo, string logoName)
         {
             //save file logo/ Rename: name + now + extension.
+            var soccerKey = Environment.GetEnvironmentVariable("SoccerTest");
             var fileExtension = Path.GetExtension(logoName);
             var fileName = Path.GetFileNameWithoutExtension(logoName);
             //This is to avoid repeating the file name.
             var now = Convert.ToString((int)DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds);
-            var fileNameNow = fileName + "-" + now + fileExtension;
+            var fileNameNow = fileName + "-" + soccerKey + now + fileExtension;
             //My path in windows is C:\Users\User\AppData\Local\Temp
             var tmpFileName = Path.Combine(Path.GetTempPath(), fileNameNow);
 
